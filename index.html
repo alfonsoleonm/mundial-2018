@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusia 2018</title>
+    <script src="https://kit.fontawesome.com/4ed3c5a971.js" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="assets/css/estiloMenu.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .button {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            padding: 40px 19px;
+            border: 7px solid #0e1f29;
+            border-radius: 35px;
+            background: #285573;
+            background: -webkit-gradient(linear, left top, left bottom, from(#285573), to(#0e1f29));
+            background: -moz-linear-gradient(top, #285573, #0e1f29);
+            background: linear-gradient(to bottom, #285573, #0e1f29);
+            -webkit-box-shadow: #30668a 0px 0px 40px 0px;
+            -moz-box-shadow: #30668a 0px 0px 40px 0px;
+            box-shadow: #30668a 0px 0px 40px 0px;
+            text-shadow: #081117 1px 1px 1px;
+            font: normal normal bold 20px arial;
+            color: #ffffff;
+            text-decoration: none;
+            width: 180px;
+            height: 170px;
+        }
+
+        .button:hover,
+        .button:focus {
+            border: 7px solid #10222e;
+            background: #30668a;
+            background: -webkit-gradient(linear, left top, left bottom, from(#30668a), to(#112531));
+            background: -moz-linear-gradient(top, #30668a, #112531);
+            background: linear-gradient(to bottom, #30668a, #112531);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .button:active {
+            background: #0e1f29;
+            background: -webkit-gradient(linear, left top, left bottom, from(#0e1f29), to(#0e1f29));
+            background: -moz-linear-gradient(top, #0e1f29, #0e1f29);
+            background: linear-gradient(to bottom, #0e1f29, #0e1f29);
+        }
+
+        .button i {
+            color: white;
+            font-size: 55px;
+            transition: all 0.3s ease-out;
+        }
+
+        .glyphicon {
+            font-size: 35px;
+            color: #18A316;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body background="assets/imagenes/Fondos/MenuFondo.jpg">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1" id="col-izquierda">
+            </div>
+
+
+            <div class="col-md-10" id="col-centro">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="container">
+                    <div class="row">
+                        <center>
+                            <a class="button" href="/mundial2018/Panels/Equipos.html"><i
+                                    class="fas fa-users "></i><br><br>Equipos</a>
+                            <a class="button" href="/mundial2018/Panels/Partidos.html"><i
+                                    class="fas fa-futbol "></i><br><br>Partidos</a>
+                            <a class="button" href="/mundial2018/Panels/Premiaciones.html"><i
+                                    class="fas fa-trophy "></i><br><br>Premiaciones</a>
+                            <a class="button" href="/mundial2018/Panels/Imagenes.html"><i
+                                    class="fas fa-images "></i><br><br>Imágenes</a>
+                            <a class="button" href="/mundial2018/Panels/Videos.html"><i
+                                    class="fab fa-youtube"></i><br><br>Videos</a>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+            <!--col centro-->
+
+            <div class="col-md-1" id="col-derecha">
+                <br><br><br><br>
+
+                <button class="reproductor">
+                    <span class="glyphicon glyphicon-volume-up"></span>
+                </button>
+                <audio src="assets/audios/audioInfo.mp3" id="audioInfo" autoplay="0"></audio>
+                <script>
+                    let boton1 = document.querySelector(".reproductor")
+                    let etiquetaAudio1 = document.querySelector("#audioInfo")
+                    boton1.addEventListener("click", () => {
+                        etiquetaAudio1.play()
+                        console.log(`Reproduciendo: ${etiquetaAudio1.src}`)
+                    })
+                </script>
+
+
+                <button id="btnRefs">
+                    <span class="glyphicon glyphicon-bookmark"></span>
+                </button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Referencias</h3>
+                        <a href="https://es.fifa.com/worldcup/archive/russia2018/">es.fifa.com
+                        </a><br>
+                        <a href="https://elpais.com/elpais/2018/07/13/album/1531499063_100926.html">ElPais
+                        </a><br>
+                        <a href="https://youtube.com/">Youtube</a><br>
+                        <a href="https://www.google.com.mx/imghp?hl=es">Google Imágenes</a><br><br>
+                    </div>
+                </div>
+
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("btnRefs");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+        <!--row-->
+    </div>
+    <!-- container fluid-->
+</body>
+
+</html>
